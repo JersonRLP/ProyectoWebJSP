@@ -52,9 +52,6 @@
 </div>
 
 </section>
-
-<script src="js/previewimg.js"></script>
-
 <script>
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -85,3 +82,6 @@
         document.getElementById('file').click();
     });
 </script>
+</body>
+</html>
+

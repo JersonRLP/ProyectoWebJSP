@@ -33,26 +33,9 @@
 
 	<!-- JQUERY -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-<script type="text/javascript">
-    function consultar() {
-        // Obtener los datos del formulario
-        var formData = $("#consultaForm").serialize();
-
-        // Realizar la solicitud AJAX
-        $.ajax({
-            type: "POST",
-            url: "ControladorDetalleBoleta",
-            data: formData,
-            success: function (response) {
-                // Actualizar la sección de resultados con la respuesta del servidor
-                $("#resultadoConsulta").html(response);
-            }
-        });
-    }
-</script>
-
+	
+	<script src="js/datatableconfig.js"></script>
+    <script src="js/detalleboleta.js"></script>
 </head>
 <body>
  <section class="home" id="content">
@@ -109,79 +92,4 @@
  </section>
 
 </body>
-<script>
-  function ObtenerCodigoSelect() {
-    var select = document.getElementsByName("codigoemp")[0];
-    var hiddenInput = document.getElementsByName("nombre")[0];
-
-    var selectedOption = select.options[select.selectedIndex];
-    if (selectedOption.value !== "zz") {
-      hiddenInput.value = selectedOption.value; // Cambiado a selectedOption.value
-    } else {
-      hiddenInput.value = "";
-    }
-  }
-
-  // Asociar el evento "change" del select con la función de actualización
-  document.getElementsByName("codigoemp")[0].addEventListener("change", ObtenerCodigoSelect);
-</script>
-<script>
-		new DataTable('#table', {
-			    language: {
-                "lengthMenu": "Mostrar _MENU_ registros",
-                "zeroRecords": "No se encontraron resultados",
-                "info": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
-                "infoEmpty": "Mostrando registros del 0 al 0 de un total de 0 registros",
-                "infoFiltered": "(filtrado de un total de _MAX_ registros)",
-                "sSearch": "Buscar:",
-                "oPaginate": {
-                    "sFirst": "Primero",
-                    "sLast":"Último",
-                    "sNext":"Siguiente",
-                    "sPrevious": "Anterior"
-			     },
-			     "sProcessing":"Procesando...",
-            },
-           
-            searching: false,
-            responsive: "true",
-            dom: 'Bfrtilp',
-            lengthMenu: [
-                         [5, 10,25, -1],
-                         [5, 10,25, 'All']
-                     ],
-			
-			buttons: [	
-
-			
-			 
-			 
-				{
-				extend:    'excelHtml5',
-				text:      '<i class="bi bi-file-earmark-excel"></i> ',
-				titleAttr: 'Exportar a Excel',
-				className: 'btn btn-success'
-			},
-			  {
-				extend:    'pdfHtml5',
-				text:      '<i class="bi bi-filetype-pdf"></i>',
-				titleAttr: 'Exportar a PDF',
-				className: 'btn btn-danger'
-			},
-			  	
-			  {
-                extend: 'print',
-                text:      '<i class="bi bi-printer"></i>',
-                titleAttr: 'Imprimir',
-                className: 'btn btn-info',
-                exportOptions: {
-                    columns: ':visible'
-                }
-             },
-      
-            ],
-
-    } );
-	
-	</script>
 </html>

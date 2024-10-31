@@ -128,7 +128,7 @@ transition:1s;
   
     </div>
   </section>
-  <script src="js/previewimg.js"></script>
+  
   
   <script>
 		new DataTable('#table', {

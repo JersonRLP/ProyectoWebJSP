@@ -14,21 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<style>
-form {
-  background-color: #FBE802;
-}
-body {
-  background-color: #F3F3F1;
-}
-label {
-margin-left: 40px;
-width:200px;
-margin-top :2px;
-}
-
-</style>
-
+	<link rel="stylesheet" href="Estilos/registrarboleta.css">
+	
 
 </head>
 

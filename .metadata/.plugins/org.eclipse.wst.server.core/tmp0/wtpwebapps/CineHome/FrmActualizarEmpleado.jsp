@@ -13,28 +13,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 
-<style>
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Esto centra verticalmente en la ventana del navegador */
-  }
-
-  form {
-    text-align: center;
-  }
-   .input-margin {
-    margin-top: 10px; /* Aplica margen superior a los elementos input */
-  }
-
-  .a-margin {
-    margin-top: 10px; /* Aplica margen superior a la etiqueta <a> */
-  }
-
-  
-</style>
+<link rel="stylesheet" href="Estilos/updempleado.css">
 
 </head>
 

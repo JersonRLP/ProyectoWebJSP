@@ -1,0 +1,25 @@
+// previewimg.js
+const defaultFile = "http://localhost/files/imagenpeli.png";
+
+const fileInput = document.getElementById("file");
+const img = document.getElementById("img");
+
+// Configurar el botón personalizado para abrir el selector de archivos
+document.getElementById('customButton').addEventListener('click', function () {
+    fileInput.click();
+});
+
+fileInput.addEventListener("change", function (e) {
+    if (e.target.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            img.src = e.target.result;
+        };
+        reader.readAsDataURL(e.target.files[0]);
+    } else {
+        img.src = defaultFile;
+    }
+});
+
+// Disparar el evento change para que la imagen se muestre al cargar la página
+fileInput.dispatchEvent(new Event("change"));
